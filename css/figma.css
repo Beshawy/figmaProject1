@@ -1,0 +1,184 @@
+*{
+    box-sizing: border-box;
+}
+:root {
+   --main-transition : .3s ;
+}
+
+::-webkit-scrollbar{
+  width: 11px;
+}
+::-webkit-scrollbar-track{
+  background-color: #eeeeee;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+  border-radius: 10px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "cairo , sans-serif";
+    height: 100vh;
+    background: rgb(240,240,246);
+    background: linear-gradient(90deg, rgba(240,240,246,1) 15%, rgba(52,64,174,1) 100%);
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none ;
+}
+.container{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media(min-width:768px){
+    .container{
+      width:750px ;
+    }
+  }
+  /*medium*/
+  @media(min-width:992px){
+      .container{
+          width:970px ;
+      }
+  }
+  @media(min-width:1200px){
+      .container{
+          width:1170px ;
+      }
+  }
+
+  /*Start Header*/
+
+.container nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container nav img{
+    height: 50px;
+}
+
+.container nav .main-nav{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container nav li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    position: relative;
+    color: black;
+    padding-right: 30px; 
+    overflow: hidden;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*End Header*/
+
+/*Start Landing*/
+.landing{
+    position: relative;
+}
+
+.landing .container{
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 120px;
+  }
+
+  .landing .image img{
+    width: 300px;
+    max-width: 100%;
+    margin-right: 60px;
+    animation: up-and-down 5s linear infinite;
+    position: relative;
+  }
+
+  @keyframes up-and-down{
+    0% , 100%{
+        top : 0 ;
+    }
+    50%{
+        top: -50px ;
+    }
+}
+
+@media (max-width:991px) {
+    .landing .image{
+        display: none;
+    }
+}
+@media (max-width:991px){
+    .landing .text{
+        text-align: center;
+    }
+}
+
+.landing .text{
+    flex: 1;
+    margin-left: 30px;
+}
+
+.landing .start-text{
+   color:  #ED6F9C ;
+   font-weight: bold;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing h1{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing .secound-text{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing .buttons .button1{
+   width: 95px;
+   border-radius: 13px;
+   height: 40px;
+   margin-right: 13px;
+   color: white;
+   background-color: #3440AE;
+   border-style: none;
+   font-family: Arial, Helvetica, sans-serif;
+   transition: var(--main-transition);
+}
+
+.landing .buttons .button2{
+    width: 95px;
+    border-radius: 13px;
+    height: 40px;
+    border: solid #3440AE 1px ;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: var(--main-transition);
+}
+
+.button1:hover{
+    background-color: #ffffff;
+    color: #3440AE;
+     border: 1px #3440AE solid;
+}
+
+.button2:hover{
+    background-color: #3440AE;
+    color: #ffffff;
+    border-style: none;
+}
+
+/*End Landing*/
